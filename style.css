@@ -50,6 +50,10 @@ h1 {
   text-align: center;
 }
 
+.rose pink {
+  background-color: rgb(255, 163, 250);
+}
+
 .purple {
   background-color: rgb(170, 84, 223);
 }
