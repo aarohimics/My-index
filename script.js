@@ -1,19 +1,7 @@
-const boxes = document.querySelectorAll('.box')
+const open = document.getElementById('open')
+const close = document.getElementById('close')
+const container = document.querySelector('.container')
 
-window.addEventListener('scroll', checkBoxes)
+open.addEventListener('click', () => container.classList.add('show-nav'))
 
-checkBoxes()
-
-function checkBoxes() {
-    const triggerBottom = window.innerHeight / 3 * 2
-
-    boxes.forEach(box => {
-        const boxTop = box.getBoundingClientRect().top
-
-        if(boxTop < triggerBottom) {
-            box.classList.add('show')
-        } else {
-            box.classList.remove('show')
-        }
-    })
-}
+close.addEventListener('click', () => container.classList.remove('show-nav'))
